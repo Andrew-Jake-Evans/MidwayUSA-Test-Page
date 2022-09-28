@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial scale=1.0">
+        <title>Test Page MidwayUSA</title>
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Noto+Sans&family=Playfair+Display:ital@0;1&display=swap');
+        </style>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <header>
+            <nav class="nav_bar">
+                <ul>
+                    <li id="home_left"><a href="Midway_Contact.html">HOME</a></li>
+                    <li><a href="Midway_Contact.html">LINK 3</a></li>
+                    <li><a href="Midway_Contact.html">LINK 2</a></li>
+                    <li><a href="Midway_Contact.html">LINK 1</a></li>
+                </ul>
+            </nav>
+        </header>
+        <section>
+            <div id="container">
+            <h1>
+                Test Page Header
+            </h1>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            </p>
+            <form id="contact_form" onsubmit="info_sent()">
+                <button class="button" onclick="show_contact_form()">Get In Touch</button>
+                <button class="button" onclick="show_product_form()">Can't Find a Product</button>
+            </form>
+            </div>
+        </section>
+        <script>
+            function show_contact_form() {
+                var x = document.getElementById("contact_form");
+                
+                x.innerHTML = "<h3>Contact Form</h3><br><br><label for=\"fname\">First Name:</label><br><input class=\"inputs\" type=\"text\" id=\"fname\" name=\"firstname\" placeholder=\"John\" required><br><br><label for=\"lname\">Last Name:</label><br><input class=\"inputs\" type=\"text\" id=\"lname\" name=\"lastname\" placeholder=\"Doe\" required><br><br><label for=\"email\">Email:</label><br><input class=\"inputs\" type=\"email\" id=\"email\" name=\"email\" placeholder=\"john.doe@gmail.com\" required pattern=\"[A-Za-z0-9._+-]+@[A-Za-z0-9 -]+\\.[a-z]{2,}\"><br><br><label for=\"contact_reason\">Contact Reason:</label><br><select class=\"inputs\" id=\"contact_reason\" name=\"contact_reason\" required onchange=\"switch_to_product_form()\"><option value=\"\" disabled selected=\"selected\">Select...</option><option value=\"order_question\">Order Question</option><option value=\"website_feedback\">Website Feedback</option><option value=\"trouble_finding_product\">Trouble finding product</option></select><br><br><label for=\"feedback\">Feedback:</label><br><input class=\"inputs\" type=\"textarea\" placeholder=\"Type something here...\" required><br><br><input id=\"submit_button\" type=\"submit\" onclick=\"mobile_click\" value=\"Submit\" onsubmit=\"info_sent()\"><input id=\"reset_button\" type=\"reset\" onclick=\"mobile_click\" value=\"Reset Form\">";
+            }
+            
+            function show_product_form() {
+                var y = document.getElementById("contact_form");
+                    
+                y.innerHTML = "<h3>Product Suggestion Form</h3><br><br<label for=\"fname\">First Name:</label><br><input class=\"inputs\" type=\"text\" id=\"fname\" name=\"firstname\" placeholder=\"John\" required><br><br><label for=\"lname\">Last Name:</label><br><input class=\"inputs\" type=\"text\" id=\"lname\" name=\"lastname\" placeholder=\"Doe\" required><br><br><label for=\"email\">Email:</label><br><input class=\"inputs\" type=\"email\" id=\"email\" name=\"email\" placeholder=\"john.doe@gmail.com\" required pattern=\"[A-Za-z0-9._+-]+@[A-Za-z0-9 -]+\\.[a-z]{2,}\"><br><br><label for=\"desired_product\">Description of Product Desired:</label><br><input class=\"inputs\" type=\"textarea\" placeholder=\"Type something here...\" required><br><br><input id=\"submit_button\" type=\"submit\" onclick=\"mobile_click\" value=\"Submit\" onsubmit=\"info_sent()\"><input id=\"reset_button\" type=\"reset\" onclick=\"mobile_click\" value=\"Reset Form\">";
+            }
+            
+            function switch_to_product_form() {
+                var a = document.getElementById("contact_form");
+                var b = document.getElementById("contact_reason");
+                
+                if(b.value == "trouble_finding_product") {
+                    alert("Switching to Product Suggestion Form");
+                    
+                    a.innerHTML = "<h3>Product Suggestion Form</h3><br><br<label for=\"fname\">First Name:</label><br><input class=\"inputs\" type=\"text\" id=\"fname\" name=\"firstname\" placeholder=\"John\" required><br><br><label for=\"lname\">Last Name:</label><br><input class=\"inputs\" type=\"text\" id=\"lname\" name=\"lastname\" placeholder=\"Doe\" required><br><br><label for=\"email\">Email:</label><br><input class=\"inputs\" type=\"email\" id=\"email\" name=\"email\" placeholder=\"john.doe@gmail.com\" required pattern=\"[A-Za-z0-9._+-]+@[A-Za-z0-9 -]+\\.[a-z]{2,}\"><br><br><label for=\"desired_product\">Description of Product Desired:</label><br><input class=\"inputs\" type=\"textarea\" placeholder=\"Type something here...\" required><br><br><input id=\"submit_button\" type=\"submit\" onclick=\"mobile_click\" value=\"Submit\"><input id=\"reset_button\" type=\"reset\" onclick=\"mobile_click\" value=\"Reset Form\">";
+                }
+                
+                else {}
+            }
+            
+            function info_sent() {
+                alert("Your Form Has Been Submitted!");
+            }
+        </script>
+    </body>
+</html>
+
+
+
+
+
+
+
+
+
+

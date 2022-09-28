@@ -1,0 +1,211 @@
+
+
+/*
+font-family: 'Bebas Neue', cursive;
+font-family: 'Noto Sans', sans-serif;
+font-family: 'Playfair Display', serif;
+*/
+
+/* HTML ------------------------------------------ */
+
+* {
+    margin: 0;
+}
+
+html {
+    background-color: lightgray;
+}
+
+/* Navigation Bar ------------------------------------------ */
+
+.nav_bar {
+    height: auto;
+}
+
+.nav_bar > ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    background-color: black;
+    overflow: hidden;
+}
+
+@media only screen and (min-width: 1000px) {
+    .nav_bar > ul > li {
+        display: inline;
+        margin: 0;
+        padding: 1em;
+        float: right;
+    }
+}
+
+.nav_bar > ul > li {
+    display: inline;
+    margin: 0;
+    padding: .7em;
+    float: right;
+    font-size: .8em;
+}
+    
+#home_left {
+    float: left;
+}
+
+.nav_bar > ul > li:hover {
+    background-color: dimgray;
+}
+
+.nav_bar > ul > li > a {
+    color: white;
+    text-decoration: none;
+    padding: 0;
+    font-size: 1.5em;
+    font-family: 'Bebas Neue', cursive;
+}
+
+/* Container ------------------------------------------ */
+
+@media only screen and (min-width: 1000px) {
+#container {
+    text-align: center;
+    margin: auto;
+    border: solid white;
+    margin-top: 3em;
+    margin-bottom: 3em;
+    width: 33vw;
+    background-color: white;
+    box-shadow: .8em .8em 1em gray;
+}
+}
+
+#container {
+    text-align: center;
+    margin: auto;
+    border: solid white;
+    margin-top: 2em;
+    margin-bottom: 2em;
+    width: 80vw;
+    background-color: white;
+    box-shadow: .4em .4em .5em gray;
+}
+
+h1 {
+    font-family: 'Playfair Display', serif;
+    margin: 1em;
+    font-size: 2em;
+}
+
+p {
+    font-family: 'Noto Sans', sans-serif;
+    margin: 1em 2em;
+    font-size: 1em;
+}
+
+/* Form ------------------------------------------ */
+
+#contact_form {
+    visibility: visible;
+    margin: 2em;
+}
+
+input, select, label, button, h2, h3 {
+    font-family: 'Noto Sans', sans-serif;
+}
+
+input, select {
+    padding: .5em;
+    border: .1em solid gray;
+    width: 100%;
+    background: grey;
+    color: white;
+}
+
+input {
+    font-weight: bold;
+}
+
+@media only screen and (min-width: 650px) {
+    input, select {
+        width: 30ch;
+    }
+}
+
+label {
+    color: dimgrey;
+}
+
+::placeholder {
+    color: lightgray;
+}
+
+:-ms-input-placeholder {
+    color: lightgray;
+}
+
+::-ms-input-placeholder {
+    color: lightgray;
+}
+
+h2 {
+    font-size: 1.2em;
+}
+
+h3 {
+    font-size: 1em;
+}
+
+input[type=textarea] {
+    height: 3em;
+}
+
+/* Buttons ------------------------------------------ */
+
+@media only screen and (min-width: 1000px) {
+    .button {
+        background-color: dodgerblue;
+        border: solid black;
+        color: black;
+        padding: .7em;
+        transition: .5s;
+        width: 40%;
+        margin: .7em;
+        font-weight: bold;
+    }
+    
+    .button:hover {
+        transform: translate(0, -.5em);
+    }
+    
+    #submit_button:hover, #reset_button:hover {
+        transform: translate(0, -.5em);
+    }
+}
+
+.button {
+    background-color: dodgerblue;
+    border: solid black;
+    color: black;
+    padding: .7em;
+    transition: .1s;
+    width: 20ch;
+    margin: .7em;
+    font-weight: bold;
+    font-size: .7em;
+}
+
+#submit_button, #reset_button {
+    background-color: dodgerblue;
+    border: solid black;
+    color: black;
+    padding: .7em;
+    margin: .7em;
+    transition: .5s;
+    width: 20ch;
+    font-weight: bold;
+}
+
+
+
+
+
+
